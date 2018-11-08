@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arapey|Old+Standard+TT');
+@import url('https://fonts.googleapis.com/css?family=Arapey|Old+Standard+TT|Heebo');
 
 @supports(grid-area:auto){
 
@@ -33,7 +33,7 @@ html, body {
   padding: 0px;
   margin: 0px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 150px 1000px 500px;
+  grid-template-rows: 150px 1500px 500px;
   grid-template-areas:
     "titl titl titl titl titl titl"
     "main main main main side side"
@@ -44,6 +44,19 @@ html, body {
   grid-area: titl;
 }
 
+#articletitle {
+  margin: 0px;
+  font-family: 'Arapey', serif;
+}
+
+#articlecategory {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  color: #1955a5;
+}
+
 #titleholder {
   width: 80%;
   margin-left: 10%;
@@ -51,9 +64,6 @@ html, body {
   border-bottom: 1px solid #dadada;
 }
 
-#articlecategory {
-  margin-top: 0px;
-}
 
 #maindiv {
   grid-area: main;
