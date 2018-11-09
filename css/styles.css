@@ -13,9 +13,65 @@ html, body {
   background-color: black;
 }
 
-#behindnavdiv {
-  width: 100%;
-  height: 60px;
+#searchbutton {
+  margin-top: 0px;
+  background-color: #1f1f1f;
+  border-color: #444;
+  border-radius: 3px;
+  border-width: .5px;
+  border-style: solid;
+  height: 36px;
+  width: 36px;
+}
+
+#searchicon {
+  height: 16px;
+  width: auto;
+  margin: 10px;
+}
+
+#sections {
+  background-color: #1f1f1f;
+  border-color: #444;
+  border-radius: 3px;
+  border-width: .5px;
+  border-style: solid;
+  height: 36px;
+  width: 100px;
+}
+
+#sectionstxt {
+  margin: 0px;
+  color: white;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+#menuicon {
+
+}
+
+#mainlogo {
+
+}
+
+#signinbutton {
+
+}
+
+#signin {
+  margin: 0px;
+}
+
+#silhouette {
+
+}
+
+#subscriptionbutton {
+
 }
 
 #socialbar {
@@ -49,6 +105,7 @@ html, body {
   height: 33%;
   width: auto;
   margin: 33% 33% 33% 33%;
+  border-radius: 2px;
 }
 
 #griddiv {
@@ -57,7 +114,7 @@ html, body {
   padding: 0px;
   margin: 0px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 235px 1500px 500px;
+  grid-template-rows: 235px 1500px 600px;
   grid-template-areas:
     "titl titl titl titl titl titl"
     "main main main main side side"
@@ -104,6 +161,7 @@ html, body {
   margin-right: 30%;
   padding-left: 8.5%;
   padding-right: 2.5%;
+  border-left: 1px solid #dadada;
 }
 
 #blackbox {
@@ -322,8 +380,38 @@ margin-bottom: 30px;
 
 #reccdiv {
   grid-area: recc;
-  background-color: #cfcfcf;
   margin-left: 15%;
+}
+
+#tpr {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.reccholder {
+  border-color: #dadada;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  margin-right: 5%;
+  margin-top: 15px;
+  height: 150px;
+}
+
+.recctitle {
+  font-family: 'Unna', serif;
+  font-size: 24px;
+  margin: 0px 33% 0px 0px;
+}
+
+.reccdescription {
+  font-family: 'Heebo', sans-serif;
+  font-size: 14px;
+  margin: 10px 33% 0px 0px;
+}
+
+.recctimestamp {
+  font-family: 'Heebo', sans-serif;
+  font-size: 14px;
 }
 
 }
