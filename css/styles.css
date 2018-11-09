@@ -188,7 +188,136 @@ html, body {
 #subscriptionbox {
   border-color: #dadada;
   border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0px 0px 2px 2px;
+  height: 320px;
+}
+
+#subsimage {
+  width: 50%;
+  height: auto;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+#substitle {
+  margin: 0px;
+  font-family: 'Unna', serif;
+  font-size: 28px;
+  color: #2a2a2a;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#subbutton1 {
+  background-color: #1955a5;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 44px;
+  color: white;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+#sb1txt, #sb2txt {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  text-align: center;
+}
+
+#subbutton2 {
+  height: 44px;
+  border-style: solid;
+  border-color: #dadada;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0px 0px 2px 2px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+#emailbox {
+  border-style: solid;
+  border-color: #dadada;
+  border-width: 0px 0px 1px 0px;
+}
+
+#emailtitle {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+#emaildesc {
+  font-size: 15px;
+  line-height: 18px;
+  font-family: 'Heebo', sans-serif;
+  margin: 0px 0px 20px 0px;
+  width: 100%;
+  color: #6a6a6a;
+}
+
+#emailinput {
+  width: 66%;
+  border-style: solid;
+  border-color: #dadada;
   border-width: 1px;
+  border-radius: 3px;
+  height: 44px;
+  font-family: 'Heebo', sans-serif;
+  padding-left: 5%;
+  font-size: 16px;
+  color: #5a5a5a;
+}
+
+#emailbutton {
+  width: 24%;
+  height: 48px;
+  background-color: #1955a5;
+  border-radius: 2px;
+  position: relative;
+  bottom: 64px;
+  left: 74%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#addtext {
+  color: white;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  padding-top: 12px;
+}
+
+#webaddress {
+  color: #2a2a2a;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+#copyright {
+color: #2a2a2a;
+font-size: 14px;
+font-family: 'Heebo', sans-serif;
+margin-top: 10px;
+margin-bottom: 30px;
+}
+
+.footerlinks {
+  color: #2a2a2a;
+  font-family: 'Heebo', sans-serif;
+  font-size: 14px;
+  margin: 10px 0px 0px 0px;
 }
 
 #reccdiv {
