@@ -1,7 +1,7 @@
 $(document).ready(function(){
   console.log('jQ loaded');
 
-  var dataPoints = [];
+/*  var dataPoints = [];
     var chart = new CanvasJS.Chart("chartContainer",{
       title:{
         text:"Rendering Chart with dataPoints from External JSON"
@@ -16,7 +16,9 @@ $.getJSON("slsummary.json", function(data) {
         dataPoints.push({x: value[0], y: parseInt(value[1])});
     });
     chart.render();
-});
+}); */
+
+//canvas charts attempt 1
 
 
   /*
@@ -52,18 +54,9 @@ $.getJSON("slsummary.json", function(data) {
     ctx.canvas.height = 400;
 
     var lineChart = new Chart(ctx).Bar(data);
-  });
+  }); */
 
-  *\
-
-
-
-/*  const CHART = document.getElementById("lineChart");
-  console.log(CHART);
-  let lineChart = new Chart(CHART, {
-    type: 'line',
-    data:
-  }) */
+  //canvas charts attempt 2
 
 
 
@@ -80,10 +73,11 @@ var slsummary = '';
     success:function(slsummary){
       console.log(slsummary);
 
-
-
     }
   })
 */
+
+//ajax call wouldn't fire - the error said it couldn't find the json file?
+
 
 });
