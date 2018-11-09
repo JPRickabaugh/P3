@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arapey|Old+Standard+TT|Heebo|Unna');
+@import url('https://fonts.googleapis.com/css?family=Arapey|Old+Standard+TT|Heebo|Unna|Libre+Franklin');
 
 @supports(grid-area:auto){
 
@@ -19,8 +19,8 @@ html, body {
 }
 
 #socialbar {
-  height:80%;
-  width: 4%;
+  height:82%;
+  width: 3.5%;
   position: fixed;
   border: 1px solid #dadada;
   top: 12%;
@@ -39,6 +39,16 @@ html, body {
   width: 100%;
   background-color: #eaeaea;
   border-radius: 0px 0px 4px 0px;
+}
+
+.iconholder {
+  height: 50px;
+}
+
+.icons {
+  height: 33%;
+  width: auto;
+  margin: 33% 33% 33% 33%;
 }
 
 #griddiv {
@@ -90,9 +100,95 @@ html, body {
 
 #sidediv {
   grid-area: side;
-  background-color: #bfbfbf;
   border-top: 0px;
   margin-right: 30%;
+  padding-left: 8.5%;
+  padding-right: 2.5%;
+}
+
+#blackbox {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: #2a2a2a;
+}
+
+.sansserifheader {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+}
+
+.blue {
+    color: #1955a5;
+}
+
+#mostreadbox {
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 2px;
+  border-style: solid;
+  border-radius: 0px 0px 3px 3px;
+  border-color: #dadada;
+  margin-bottom: 60px;
+}
+
+.mostreadentry {
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: #dadada;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.mostreadnumber {
+  font-family: 'Libre Franklin', san-serif;
+  font-weight: bold;
+  font-size: 22px;
+  color: #2a2a2a;
+  margin-bottom: 0px;
+  margin-top: 3%;
+  width: 20px;
+}
+
+.mostreadtitle {
+  font-size: 15px;
+  line-height: 18px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 0;
+  color: #6a6a6a;
+  margin-left: 30px;
+  position: relative;
+  bottom: 40px;
+  width: 60%;
+}
+
+#mr1 {
+  height: 60px;
+}
+
+#mr2{
+  height: 90px;
+}
+
+#mr3{
+  height: 60px;
+}
+
+#mr4{
+  height: 90px;
+}
+
+#mr5{
+  height: 90px;
+}
+
+#subscriptionbox {
+  border-color: #dadada;
+  border-style: solid;
+  border-width: 1px;
 }
 
 #reccdiv {
