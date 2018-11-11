@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arapey|Old+Standard+TT|Heebo|Unna|Libre+Franklin');
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT|Heebo|Unna|Libre+Franklin');
 
 @supports(grid-area:auto){
 
@@ -25,7 +25,7 @@ html, body {
   position: relative;
   top: 12px;
   left: 15px;
-}
+} /* all items, unless marked otherwise, are styled to adjust position, color, size, and other aesthetics. Any unique functions will be commented on individually below */
 
 #searchicon {
   height: 16px;
@@ -166,7 +166,7 @@ html, body {
 .icons:hover {
   opacity: 0.8;
   transition: 0.25s;
-}
+} /* icons fade a little on hover */
 
 #griddiv {
   display: grid;
@@ -179,7 +179,7 @@ html, body {
     "titl titl titl titl titl titl"
     "main main main main side side"
     "recc recc recc recc side side";
-}
+} /* main grid layout */
 
 #titlediv {
   grid-area: titl;
@@ -188,7 +188,7 @@ html, body {
 #articletitle {
   margin: 0px;
   font-family: 'Old Standard TT', serif;
-  font-size: calc(21px + 2.5vw);
+  font-size: calc(21px + 2.5vw); /* coding used by WAPO - allows font to adjust with viewport size, enhances responsiveness */
   color: #2a2a2a;
 }
 
@@ -230,12 +230,12 @@ html, body {
 
 .authg {
   margin-bottom: 5px;
-}
+} /* specific class for text in author info section, for positioning */
 
 .maintext {
   font-family: 'Unna', serif;
-  font-size: calc(16.4px + 0.375vw);
-  line-height: calc(1.5em + .3333vw);
+  font-size: calc(16.4px + 0.375vw); /* coding used by WAPO - allows font to adjust with viewport size, enhances responsiveness */
+  line-height: calc(1.5em + .3333vw); /* coding used by WAPO - allows font to adjust with viewport size, enhances responsiveness */
   color: #2a2a2a;
   margin-bottom: 20px;
   margin-left: 0%;
@@ -245,12 +245,14 @@ html, body {
   width: 100%;
 }
 
-#lineGraph, #barGraph {
-  margin-left: 10%;
-
+.chart {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-
+#lineGraph, #barGraph {
+  margin-left: 10%;
+}
 
 #EBEA{
   margin-top: 20px;
@@ -569,7 +571,7 @@ margin-bottom: 30px;
     background-color: black;
   }
 
-  #searchbutton {
+  #searchbutton { /* many items not displayed on mobile version */
     display: none;
   }
 
@@ -678,7 +680,7 @@ margin-bottom: 30px;
   #articletitle {
     margin: 0px;
     font-family: 'Old Standard TT', serif;
-    font-size: calc(21px + 2.5vw);
+    font-size: calc(21px + 2.5vw); /* coding used by WAPO - allows font to adjust with viewport size, enhances responsiveness */
     color: #2a2a2a;
   }
 
@@ -736,8 +738,8 @@ margin-bottom: 30px;
 
   .maintext {
     font-family: 'Unna', serif;
-    font-size: calc(16.4px + 0.375vw);
-    line-height: calc(1.5em + .3333vw);
+    font-size: calc(16.4px + 0.375vw); /* coding used by WAPO - allows font to adjust with viewport size, enhances responsiveness */
+    line-height: calc(1.5em + .3333vw); /* coding used by WAPO - allows font to adjust with viewport size, enhances responsiveness */
     margin: 0px 5% 20px 5%;
     color: #2a2a2a;
     width: 90%;
