@@ -5,24 +5,13 @@ $(document).ready(function(){
 //Initialize variables
 var url = './js/slsummary.json';
 var data = [];
-//You need to use the JSON data to build new arrays to replace the hard-coded ones in HighCharts
 var xCat = [];
-var popArray= [];
-var airportArray = [];
 var percentageFree = [];
 var percentageFullPrice = [];
 var millionFree = [];
 var millionReduced = [];
 var millionFullPrice = [];
-
 var outerArray = [];
-
-
-
-/*Note: The HighCharts starter code uses the jQuery ready function to build the chart on page load.
-If you move the .ready to the top of your JS file, you must add your own callback function
-to build the chart after the AJAX call.
-*/
 
 //Load the JSON data
   $.ajax({
@@ -33,7 +22,7 @@ to build the chart after the AJAX call.
     async:true,
     success: function(data){
       //console.log(data);
-      //Loop through and push the data into the empty arrays for Population and Airports
+      //Loop through and push the data into the empty arrays
       for (i = 0; i < data.length; ++i) {
 
          xCat.push(data[i].timestamp);
@@ -42,10 +31,7 @@ to build the chart after the AJAX call.
          millionFree.push((data[i].Free));
          millionReduced.push((data[i].ReducedPrice));
          millionFullPrice.push((data[i].FullPrice));
-  //Build an array of arrays for a scatterplot
-        // popArray.push(data[i].Population);
-         //airportArray.push(data[i].Airports);
-         //outerArray.push([data[i].Population, data[i].Airports]);
+
       }
 
       //Call the function that builds the chart
@@ -54,7 +40,6 @@ to build the chart after the AJAX call.
   });//close AJAX call
 
 console.log(xCat);
-//console.log(popArray);
 function buildChart() {
 
   var myChart = Highcharts.chart('line-chart', {
