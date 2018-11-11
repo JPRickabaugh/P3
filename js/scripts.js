@@ -11,6 +11,9 @@ var popArray= [];
 var airportArray = [];
 var percentageFree = [];
 var percentageFullPrice = [];
+var millionFree = [];
+var millionReduced = [];
+var millionFullPrice = [];
 
 var outerArray = [];
 
@@ -36,6 +39,9 @@ to build the chart after the AJAX call.
          xCat.push(data[i].timestamp);
          percentageFree.push((data[i].percentFree));
          percentageFullPrice.push((data[i].percentFullPrice));
+         millionFree.push((data[i].Free));
+         millionReduced.push((data[i].ReducedPrice));
+         millionFullPrice.push((data[i].FullPrice));
   //Build an array of arrays for a scatterplot
         // popArray.push(data[i].Population);
          //airportArray.push(data[i].Airports);
@@ -66,7 +72,7 @@ function buildChart() {
           categories: xCat
       },
       yAxis: {
-          //min: 0,
+          min: 0,
           title: {
               text: 'Participation %'
           }
@@ -98,10 +104,58 @@ function buildChart() {
 
   });
 
+   var myChart = Highcharts.chart('stacked-column-chart', {
+
+       chart: {
+           type: 'column'//same thing as bar chart, just vertical
+       },
+       title: {
+           text: 'Total Meals Served'
+       },
+       subtitle: {
+           text: 'Source: data.gov'
+       },
+       xAxis: {
+           categories: xCat
+       },
+       yAxis: {
+           min: 0,
+           title: {
+               text: 'Quantity of Meals (Millions)'
+           }
+       },
+       //ADD TOOLTIP & PLOTOPTIONS AFTER YOU DEMOSTRATE THE BASIC CHART
+       tooltip: {
+           headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+           pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+               '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+           footerFormat: '</table>',
+           shared: true,
+           useHTML: true
+       },
+       plotOptions: {
+           column: {
+               stacking: 'normal',
+               pointPadding: 0.1,//CHANGE THE WIDTH AND PADDING OF THE BARS
+               borderWidth: 0
+           }
+       },
+       series: [{
+         name: 'Amount of students paying full price',
+         data: millionFullPrice
+       }, {
+         name: 'Amount of students paying reduced price',
+         data: millionReduced
+       }, {
+         name: 'Amount of students receiving free meals',
+         data: millionFree
+       }
+     ]
+
+   });
 
 
- }
 
-
+  }
 
 });

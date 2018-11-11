@@ -11,7 +11,7 @@ html, body {
   width: 100%;
   height: 60px;
   background-color: black;
-}
+} /* nav bar background */
 
 #searchbutton {
   margin-top: 0px;
@@ -136,7 +136,7 @@ html, body {
   border: 1px solid #dadada;
   top: 12%;
   border-radius: 0px 4px 4px 0px;
-}
+} /* position fixed so bar stays on side of page and follows you like real website. Was considering doing this with the nav bar at the top, but could not make it function in a pretty enough way to make it better than a stationary nav */
 
 #tophalf {
   height: 73%;
@@ -174,7 +174,7 @@ html, body {
   padding: 0px;
   margin: 0px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 235px 3400px 600px;
+  grid-template-rows: 235px 3600px 600px;
   grid-template-areas:
     "titl titl titl titl titl titl"
     "main main main main side side"
@@ -663,7 +663,7 @@ margin-bottom: 30px;
     padding: 0px;
     margin: 0px;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 3050px 900px 1600px;
+    grid-template-rows: 150px 3650px 900px 1600px;
     grid-template-areas:
       "titl"
       "main"
