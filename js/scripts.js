@@ -1,8 +1,6 @@
 $(document).ready(function(){
   console.log ('DOM loaded');
 
-
-//Initialize variables
 var url = './js/slsummary.json';
 var data = [];
 var xCat = [];
@@ -11,21 +9,20 @@ var percentageFullPrice = [];
 var millionFree = [];
 var millionReduced = [];
 var millionFullPrice = [];
-var outerArray = [];
+var outerArray = []; //declare variables
 
-//Load the JSON data
-  $.ajax({
+  $.ajax({ //load JSON data
     type:'GET',
     dataType:'json',
     data: data,
     url: url,
     async:true,
     success: function(data){
-      //console.log(data);
+      //log data
       //Loop through and push the data into the empty arrays
       for (i = 0; i < data.length; ++i) {
 
-         xCat.push(data[i].timestamp);
+         xCat.push(data[i].timestamp); //push relevant data into array for use - in this case, the timestamp
          percentageFree.push((data[i].percentFree));
          percentageFullPrice.push((data[i].percentFullPrice));
          millionFree.push((data[i].Free));
@@ -34,18 +31,15 @@ var outerArray = [];
 
       }
 
-      //Call the function that builds the chart
-      buildChart();
+      buildChart(); //build the chart
     }
-  });//close AJAX call
-
-console.log(xCat);
+  }); //close AJAX
 function buildChart() {
 
-  var myChart = Highcharts.chart('line-chart', {
+  var myChart = Highcharts.chart('line-chart', { //first chart is a standard line chart
 
       chart: {
-          type: 'line'//same thing as bar chart, just vertical
+          type: 'line'
       },
       title: {
           text: 'Frequency of Paid and Free Meals'
@@ -54,16 +48,15 @@ function buildChart() {
           text: 'Source: National School Lunch Assistance Program Participation and Meals Served Data'
       },
       xAxis: {
-          categories: xCat
+          categories: xCat //xcat is the timestamp in this case
       },
       yAxis: {
-          min: 0,
+          min: 0, //starts at 0
           title: {
               text: 'Participation %'
           }
       },
-      //ADD TOOLTIP & PLOTOPTIONS AFTER YOU DEMOSTRATE THE BASIC CHART
-      tooltip: {
+      tooltip: { //tooltip
           headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
           pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
               '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
@@ -71,28 +64,19 @@ function buildChart() {
           shared: true,
           useHTML: true
       },
-      plotOptions: {
-          column: {
-              pointPadding: 0.1,//CHANGE THE WIDTH AND PADDING OF THE BARS
-              borderWidth: 0
-          }
-      },
       series: [{
           name: '% of students receiving free meals',
           data: percentageFree
-
       }, {
-        name: '% of students paying full price',
-        data: percentageFullPrice
-      }
-    ]
-
+          name: '% of students paying full price',
+          data: percentageFullPrice
+      }]
   });
 
-   var myChart = Highcharts.chart('stacked-column-chart', {
+   var myChart = Highcharts.chart('stacked-column-chart', { //2nd chart is a stacked column chart
 
        chart: {
-           type: 'column'//same thing as bar chart, just vertical
+           type: 'column'
        },
        title: {
            text: 'Total Meals Served'
@@ -109,7 +93,6 @@ function buildChart() {
                text: 'Quantity of Meals (Millions)'
            }
        },
-       //ADD TOOLTIP & PLOTOPTIONS AFTER YOU DEMOSTRATE THE BASIC CHART
        tooltip: {
            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
@@ -120,9 +103,8 @@ function buildChart() {
        },
        plotOptions: {
            column: {
-               stacking: 'normal',
-               pointPadding: 0.1,//CHANGE THE WIDTH AND PADDING OF THE BARS
-               borderWidth: 0
+               stacking: 'normal', //makes series stack instead of setting them side by side
+               pointPadding: .1, //bar size
            }
        },
        series: [{
@@ -134,30 +116,7 @@ function buildChart() {
        }, {
          name: 'Amount of students receiving free meals',
          data: millionFree
-       }
-     ]
-
+       }]
    });
-
-
-
   }
-
-  $('#results').DataTable( {
-       "ajax": "/js/slsummary.txt",
-       "columns": [
-           { "data": "timestamp"},
-           { "data": "Free" },
-           { "data": "ReducedPrice" },
-           { "data": "FullPrice" },
-           { "data": "Total" },
-           { "data": "percentFree"},
-           { "data": "percentFullPrice"}
-         ],
-         lengthChange: false,
-         pageLength: 7
-
-
-                });//close DataTable
-
 });

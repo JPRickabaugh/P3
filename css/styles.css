@@ -27,6 +27,11 @@ html, body {
   left: 15px;
 } /* all items, unless marked otherwise, are styled to adjust position, color, size, and other aesthetics. Any unique functions will be commented on individually below */
 
+#searchbutton:hover, #sections:hover, #signinbutton:hover {
+  border-color: white;
+  transition: .5s;
+} /* on hover, change outline colo of these buttons */
+
 #searchicon {
   height: 16px;
   width: auto;
@@ -117,6 +122,11 @@ html, body {
   left: 89%;
   bottom: 148px;
 }
+
+#subscriptionbutton:hover,  #subbutton1:hover, #emailbutton:hover {
+  background-color: #3d73d5;
+  transition: .5s;
+} /* on hover, blue buttons change shades */
 
 #subscriptiontext {
   margin: 0px;
@@ -326,6 +336,15 @@ html, body {
     color: #1955a5;
     font-weight: 700;
 }
+
+#authorname:hover {
+  text-decoration: underline;
+} /* author text gets underline on hover, like a link, */
+
+.footerlinks:hover, .mostreadtitle:hover, .recctitle:hover {
+  color: #1955a5;
+  transition: .5s;
+} /* these types of "links" become blue when hovered over */
 
 #mostreadbox {
   border-top-width: 1px;
