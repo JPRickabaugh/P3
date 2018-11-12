@@ -262,6 +262,8 @@ table {
 .chart {
   margin-left: 5%;
   margin-right: 5%;
+  width: 90%;
+  height: 500px;
 }
 
 #lineGraph, #barGraph {
