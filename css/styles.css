@@ -696,7 +696,7 @@ margin-bottom: 30px;
     padding: 0px;
     margin: 0px;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 3650px 900px 1600px;
+    grid-template-rows: 150px 3600px 900px 1600px;
     grid-template-areas:
       "titl"
       "main"
