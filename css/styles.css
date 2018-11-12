@@ -251,6 +251,10 @@ html, body {
   margin-left: 0%;
 }
 
+table {
+  font-family: 'Heebo', sans-serif;
+}
+
 .graphic {
   width: 100%;
 }
@@ -754,6 +758,8 @@ margin-bottom: 30px;
   .authg {
     margin-bottom: 5px;
   }
+
+
 
   .maintext {
     font-family: 'Unna', serif;
