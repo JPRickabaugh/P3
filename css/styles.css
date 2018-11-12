@@ -184,7 +184,7 @@ html, body {
   padding: 0px;
   margin: 0px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 235px 3900px 600px;
+  grid-template-rows: 235px 4000px 600px;
   grid-template-areas:
     "titl titl titl titl titl titl"
     "main main main main side side"
@@ -696,7 +696,7 @@ margin-bottom: 30px;
     padding: 0px;
     margin: 0px;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 3600px 900px 1600px;
+    grid-template-rows: 150px 3625px 900px 1600px;
     grid-template-areas:
       "titl"
       "main"
