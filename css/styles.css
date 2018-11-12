@@ -184,7 +184,7 @@ html, body {
   padding: 0px;
   margin: 0px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 235px 3950px 600px;
+  grid-template-rows: 235px 3900px 600px;
   grid-template-areas:
     "titl titl titl titl titl titl"
     "main main main main side side"
@@ -692,7 +692,7 @@ margin-bottom: 30px;
 
   #griddiv {
     display: grid;
-    width: 400px;
+    width: 100%;
     padding: 0px;
     margin: 0px;
     grid-template-columns: 1fr;
@@ -769,8 +769,6 @@ margin-bottom: 30px;
     margin-bottom: 5px;
   }
 
-
-
   .maintext {
     font-family: 'Unna', serif;
     font-size: calc(16.4px + 0.375vw); /* coding used by WAPO - allows font to adjust with viewport size, enhances responsiveness */
@@ -778,6 +776,11 @@ margin-bottom: 30px;
     margin: 0px 5% 20px 5%;
     color: #2a2a2a;
     width: 90%;
+  }
+
+
+  #tablediv {
+    display: none;
   }
 
   #sources {
