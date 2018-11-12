@@ -89,16 +89,31 @@
         <div class="maintext"> America’s youth have not always had access to free meals though - the program was instituted as early as 1969. Similar services had existed in the past, but none on a federal level. </div> <!-- general div which holds article text in main div -->
         <div class="maintext"> The First official step towards this program arrived with the Child Nutrition Act of 1966, which  aimed to expand and strengthen efforts to ensure child nutrition, by assisting states financially, via grants or other means. </div> <!-- general div which holds article text in main div -->
         <div class="graphic">  <!-- general div designated for holding images/graphs -->
-          <div class="chart" id="stacked-column-chart" style="width:90%; height:500px;"></div>
+          <div class="chart" id="stacked-column-chart" style="width:90%; height:500px;"></div> <!-- stacked column chart html -->
         </div>
         <div class="maintext">Following its institution, school faculties around the country began noticing positive changes. According to an elementary school principal from Green Bay, Wisconsin, “Attendance has improved by approximately ¾-day per student. The majority of children have shown a good increase in weight (some 10-12 pounds). Children are now receiving an on-going education in meal planning and nutrition, as well as invaluable experience in observation. </div> <!-- general div which holds article text in main div -->
         <div class="maintext">In the time since its inception, the National School Lunch Assistance Program has expanded its reach, offering additional nutritional services, such as free breakfast. Not only did they increase the amount of services offered, they’ve increased the amount of students on their free lunch program more than sixfold, from 2.9 million recipients in 1969 to 20 million as of 2017. </div> <!-- general div which holds article text in main div -->
         <div class="graphic">  <!-- general div designated for holding images/graphs -->
-          <div class="chart" id="line-chart" style="width:90%; height:500px;"></div>
+          <div class="chart" id="line-chart" style="width:90%; height:500px;"></div> <!-- line chart html -->
         </div>
         <div class="maintext">Nowadays, the percentage of students receiving free lunches from the NSLP is 67%, whereas only 27% of students are purchasing their lunch. This raises some questions - for example, is this slow but large increase merely showing that the system is working as intended? Or perhaps the amount of students requiring free lunches has increased due to other problems. According to an article by the Pew Research Center, although wages have risen significantly, their purchasing power is nearly the same as it was in 1978. </div> <!-- general div which holds article text in main div -->
         <div class="maintext">This mass wage stagnation has no doubt made it harder for everyday Americans to get by, a sentiment that has found itself constantly amplified by younger generations as they enter the workforce. As such, it seems likely that a contributor to the growth of the NSLP is the ever decreasing amount of parents who can comfortably afford to feed their children at school. </div> <!-- general div which holds article text in main div -->
         <div class="maintext">Regardless of the cause, the NSLP isn’t showing any signs of slowing down. Maybe in the next few decades, lunch will become free for all students.</div> <!-- general div which holds article text in main div -->
+        <div class="graphic">
+          <table id="results" class="display" style="width:100%"> <!-- table HTML -->
+            <thead>
+                  <tr>
+                      <th>Fiscal Year</th>
+                      <th>Free Lunches (Millions)</th>
+                      <th>Reduced Price Lunches (Millions)</th>
+                      <th>Full Price Lunches (Millions)</th>
+                      <th>Total Lunches (Millions)</th>
+                      <th>Free Lunches (%)</th>
+                      <th>Full Price Lunches (%)</th>
+                  </tr>
+              </thead>
+          </table>
+        </div>
         <p id="sources" class="sansserifheader">Sources</p>
         <div class="maintext"> <!-- general div which holds article text in main div -->
           <ul>
@@ -198,6 +213,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

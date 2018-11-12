@@ -51,7 +51,7 @@ function buildChart() {
           text: 'Frequency of Paid and Free Meals'
       },
       subtitle: {
-          text: 'Source: data.gov'
+          text: 'Source: National School Lunch Assistance Program Participation and Meals Served Data'
       },
       xAxis: {
           categories: xCat
@@ -98,7 +98,7 @@ function buildChart() {
            text: 'Total Meals Served'
        },
        subtitle: {
-           text: 'Source: data.gov'
+           text: 'Source: National School Lunch Assistance Program Participation and Meals Served Data'
        },
        xAxis: {
            categories: xCat
@@ -142,5 +142,22 @@ function buildChart() {
 
 
   }
+
+  $('#results').DataTable( {
+       "ajax": "/js/slsummary.txt",
+       "columns": [
+           { "data": "timestamp"},
+           { "data": "Free" },
+           { "data": "ReducedPrice" },
+           { "data": "FullPrice" },
+           { "data": "Total" },
+           { "data": "percentFree"},
+           { "data": "percentFullPrice"}
+         ],
+         lengthChange: false,
+         pageLength: 7
+
+
+                });//close DataTable
 
 });

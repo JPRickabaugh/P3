@@ -174,7 +174,7 @@ html, body {
   padding: 0px;
   margin: 0px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 235px 3600px 600px;
+  grid-template-rows: 235px 3950px 600px;
   grid-template-areas:
     "titl titl titl titl titl titl"
     "main main main main side side"
