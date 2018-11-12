@@ -217,7 +217,6 @@ html, body {
   border-bottom: 1px solid #dadada;
 }
 
-
 #maindiv {
   grid-area: main;
   border-top: 0px;
@@ -253,6 +252,7 @@ html, body {
 
 table {
   font-family: 'Heebo', sans-serif;
+  width: 100%;
 }
 
 .graphic {
@@ -598,6 +598,12 @@ margin-bottom: 30px;
     display: none;
   }
 
+  #navdiv {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+  } /* nav bar background */
+
   #searchicon {
     display: none;
   }
@@ -684,7 +690,7 @@ margin-bottom: 30px;
 
   #griddiv {
     display: grid;
-    width: 100%;
+    width: 400px;
     padding: 0px;
     margin: 0px;
     grid-template-columns: 1fr;
@@ -699,6 +705,8 @@ margin-bottom: 30px;
   #titlediv {
     grid-area: titl;
   }
+
+
 
   #articletitle {
     margin: 0px;
